@@ -41,7 +41,7 @@ const movie = ref({});
 const route = useRoute();
 
 onBeforeMount( async () => {
-    const resp = await axios.get(`http://www.omdbapi.com/?apikey=${env.apikey}&i=${route.params.id}&plot=full`);
+    const resp = await axios.get(`https://www.omdbapi.com/?apikey=${env.apikey}&i=${route.params.id}&plot=full`);
     movie.value = resp.data;
 });
 

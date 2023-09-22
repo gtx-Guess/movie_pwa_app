@@ -51,7 +51,7 @@ const movies = ref([]);
 
 const SearchMovies = async () => {
     if(search.value !== ''){ 
-        const resp = await axios.get(`http://www.omdbapi.com/?apikey=${env.apikey}&s=${search.value}`);
+        const resp = await axios.get(`https://www.omdbapi.com/?apikey=${env.apikey}&s=${search.value}`);
         movies.value = resp.data.Search;
         search.value = '';
     }
