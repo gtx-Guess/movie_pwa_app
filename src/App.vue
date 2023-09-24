@@ -40,7 +40,7 @@ header{
         color: #FFF;
         font-size: 32px;
         span{
-            color: #42B883
+            color: #42B883;
         }
     }
     @media (min-width: 470px){
