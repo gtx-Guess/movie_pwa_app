@@ -60,7 +60,7 @@ const SearchMovies = async () => {
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 // Global scss variable
 $screen-width: 1200px;
 //

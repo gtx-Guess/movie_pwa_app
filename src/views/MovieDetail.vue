@@ -1,7 +1,7 @@
 <template>
     <div class="movie-detail">
         <h2>{{ movie.Title }}</h2>
-        <p>{{ movie.Year }}</p>
+        <p class="year">{{ movie.Year }}</p>
         <div class="poster">
             <img :src="movie.Poster" alt="Movie Poster" class="featured-img" loading="lazy">
             <div class="pre-plot">
@@ -13,20 +13,23 @@
                 <p><span class="header">Rated</span>: {{ movie.Rated }}</p>
             </div>
         </div><br>
-        <p>{{ movie.Plot }}</p>
+        <p class="plot">{{ movie.Plot }}</p>
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+// Global scss variable
 $header-color: #42B883;
+$screen-width: 1200px;
+//
 .movie-detail{
     padding: 16px;
-
     .poster{
         margin-bottom: 16px;
         display: flex;
+        justify-content: center;
         .pre-plot{
-            padding-left: 1.5vw;
+            padding: 1.5vw;
             background-color: rgba(0,0,0,0.4);
             .header{
                 color: $header-color;
@@ -43,6 +46,20 @@ $header-color: #42B883;
             max-width: 200px;
         }
     }
+    @media (min-width: $screen-width) {
+        .poster{
+            .featured-img{
+                min-width: 350px;
+            };
+        }
+
+        .plot{
+            text-align: center;
+            max-width: 87%;
+            padding-left: 13%;
+            font-size: 20pt;
+        }
+    }
 
     h2{
         color: #FFF;
@@ -55,6 +72,26 @@ $header-color: #42B883;
         color: #FFF;
         font-size: 18px;
         line-height: 1.4;
+    }
+
+    @media (min-width: 800px){
+        h2, .year{
+            text-align: center;
+        }
+        h2{ font-size: 50px;}
+        .year{ font-size: 30px;}
+
+        .poster .pre-plot p{
+            font-size: 14pt;
+        }
+    }
+}
+
+@media (min-width: $screen-width){
+    .movie-detail{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
