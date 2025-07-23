@@ -1,6 +1,6 @@
 # Vue 3 + Vite
 
-Live link: https://movie-pwa-app.up.railway.app/
+Live link: https://vma.tdnet.xyz/
 
 Single page PWA app built using vite with vue3. Finally got the bastard to download on my phone after 4 hours of messing with the manifest and service worker files, would download no problem on my mac but wouldnt do it on my phone
 
